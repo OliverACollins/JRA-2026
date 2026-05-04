@@ -9,10 +9,6 @@
 - Hypothesis: It is predicted that visual illusion sensitivity will be stronger (i.e., perception will be less accurate) during systole than diastole in the “Illusion Game” task.
 
 <figure>
- <img src = "research-proposal\figure.png" alt = "Hypothesised visual illusion sensitivity in systole vs diastole"/>
+ <img src = "proposal/figure.png" alt = "Hypothesised visual illusion sensitivity in systole vs diastole"/>
  <figcaption><i>Physiological pathways for systole/diastole and the predicted responses towards illusion sensitivity.</i></figcaption>
 </figure>
-
-## Test the experiment
-- [**Resting State**](https://oliveracollins.github.io/JRA-2026/experiment/RestingState.html)
-- [**Illusion Game**](https://oliveracollins.github.io/JRA-2026/experiment/IllusionGame.html)
