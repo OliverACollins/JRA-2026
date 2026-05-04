@@ -20,10 +20,10 @@ const demographics_consent = {
                      <h1>Information Sheet</h1>
                     <p><b>Invitation to Take Part</b><br>
                     Thank you for considering to take part in this study that aims at deepening our understanding of human perception. 
-                    This study is being conducted by Oliver Collins and Dr Dominique Makowski from the <b>University of Sussex</b>, who are happy to be contacted if you have any questions (see contact information below).</p>
+                    This study is being conducted by Oliver Collins and Dr. Dominique Makowski from the <b>University of Sussex</b>, who are happy to be contacted if you have any questions (see contact information below).</p>
 
                     <p><b>Why have I been invited and what will I do?</b><br>
-                    The goal is to investigate how our brains can unconsciously adapt and shape our perception to achieve desired goals. 
+                    The goal is to investigate how our brains can unconsciously adapt and shape our perception to achieve desired goals. In this experiment, you will complete the <b>Illusion Game</b> - a task of speed and reflex in which you will need to make judgements whilst resisting different visual illusions.
                     The whole experiment will take <b style='color:#FF5722;'>~60 min</b> to complete, from setting up physiological sensors to the debriefing.</p>
                         
                     <p><b>Do I have to take part?</b><br>
@@ -31,14 +31,14 @@ const demographics_consent = {
                     If you choose to take part, you will be asked to provide your consent electronically before starting the study.
                     As we are not collecting any personally identifiable information, it will not be possible to withdraw your data after you submit it.
                     
-                        <p><b>Physiological Signals</b><br>
+                    <p><b>Physiological Signals</b><br>
                     We will be recording some of your body's electrical activity using ECG and EEG; both are simple non-intrusive procedures used in research and in the life sciences. 
                     Since this study is being undertaken for research purposes only, we will not be able to provide any feedback or information on clinical aspects of the data obtained. 
                     For the ECG we will be attaching some sensors to the skin, and for the EEG we will be using the Muse headset which contains electrodes that will be placed on your forehead and behind the ears. 
                     We kindly ask that you refrain from participating if you are aware of having skin reactions or allergies to adhesives or the materials used in the electrodes - primarily composed of silver and silver chloride.</p>
 
                     <p><b>What will happen to the results and my personal information?</b><br>
-                    The results of this research may be written into a scientific publication. Your anonymity will be ensured in the way described in the consent information below. 
+                    This project is being funded by the <b>Junior Research Associate</b> (JRA) Scheme at the University of Sussex. The results of this research will be presented at the JRA Poster Exhibition in October 2026 and may be written into a scientific publication. Your anonymity will be ensured in the way described in the consent information below. 
                     <b>Please read this information carefully</b> and then, if you wish to take part, please acknowledge that you have fully understood this sheet, and that you consent to take part in the study as it is described here.</p>
                     
                     <p><b>Who has approved this study?</b><br>
@@ -48,7 +48,7 @@ const demographics_consent = {
                     The University of Sussex has insurance in place to cover its legal liabilities in respect of this study.
 
                     <p><b>Contact for Further Information</b><br>  
-                    For further information about this research, or if you have any concerns, please contact Dr Dominique Makowski 
+                    For further information about this research, or if you have any concerns, please contact Dr. Dominique Makowski 
                     (<i style='color:DodgerBlue;'>D.Makowski@sussex.ac.uk</i>), Oliver Collins (<i style='color:DodgerBlue;'>oc236@sussex.ac.uk</i>).
                     If you have any concerns about the way in which the study has been conducted, you should contact the SEMSET Faculty Research Ethics Committee at <i style='color:DodgerBlue;'>frecsemset@sussex.ac.uk</i>.
                     
@@ -387,7 +387,7 @@ const experiment_feedback = {
     survey_json: {
         title: "Feedback",
         description:
-            "It is the end of the experiment! Don't hesitate to leave us some feedback. " +
+            "It is the end of the experiment! Please don't hesitate to leave us some feedback. " +
             "After clicking 'Next', we will provide you with more information about the study.",
         completeText: "Next",
         showQuestionNumbers: false,
@@ -437,7 +437,7 @@ const demographics_debriefing = {
                 <div class="narrow-text" style="text-align: left; max-width: 800px; margin: 0 auto;">
                 <h2>Debriefing</h2>
                 <p>The purpose of this study was for us to understand how humans perceive visual illusions, and whether this relates to physiological (bodily) signals. 
-                We are testing the hypothesis that there will be differences in the perceived strength of visual illusions depending on which cardiac phase the viewer is in when they perceive the illusion.</p>
+                We are testing the hypothesis that there will be differences in the perceived strength of visual illusions depending on which cardiac phase the perceiver is in when they view the illusion.</p>
                 <p><b>The cardiac cycle can be divided into two phases:</b></p>
                 <ul>
                     <li><b style="color: #f6b8b8;">Systole</b>: Where the ventricles of the heart contract, ejecting blood into the arteries, with blood pressure peaking.</li>

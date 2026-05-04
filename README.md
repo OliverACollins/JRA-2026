@@ -4,9 +4,9 @@
 
 <b>Project Title: "Role of the Cardiac Cycle in the Perception of Reality and Illusion"</b>
 
-## Aims and Hypotheses
+## Aims and hypotheses
 - Aim: To investigate the role of the cardiac phase (systole vs diastole) in visual illusion sensitivity.
-- Hypothesis: It is predicted that visual illusion sensitivity will be stronger (i.e., perception will be less accurate) during systole than diastole in the “Illusion Game” task.
+- Hypothesis: It is predicted that visual illusion sensitivity will be stronger (i.e., perception will be less accurate) during systole than diastole in the “Illusion Game” (IG) task.
 
 <p align="center">
   <img src = "proposal/figure.png", alt = "Hypothesised visual illusion sensitivity in systole vs diastole"/>
