@@ -1,6 +1,6 @@
 # JRA-2026
 
-<i>This repository will house all relevant documents and scripts for my 2026 University of Sussex Junior Research Associate (JRA) scheme project</i>
+<i>This repository will house all relevant documents and scripts for my 2026 University of Sussex <b>Junior Research Associate</b> (JRA) scheme project</i>
 
 <b>Project Title: "Role of the Cardiac Cycle in the Perception of Reality and Illusion"</b>
 
@@ -12,3 +12,7 @@
  <img src = "research-proposal\figure.png" alt = "Hypothesised visual illusion sensitivity in systole vs diastole"/>
  <figcaption><i>Physiological pathways for systole/diastole and the predicted responses towards illusion sensitivity.</i></figcaption>
 </figure>
+
+## Test the experiment
+- [**Resting State**](https://oliveracollins.github.io/JRA-2026/experiment/RestingState.html)
+- [**Illusion Game**](https://oliveracollins.github.io/JRA-2026/experiment/IllusionGame.html)
