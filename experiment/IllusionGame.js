@@ -1,3 +1,61 @@
+// -----------------------
+// LSL bridge (promise-based)
+// -----------------------
+var lslBaseTime = null
+
+function syncLSL() {
+    return new Promise(async function (resolve, reject) {
+        try {
+            let offsets = []
+            for (let i = 0; i < 3; i++) {
+                var startPerf = performance.now()
+                let resp = await fetch("http://192.168.0.18:5000/sync", { cache: "no-store" }) // change IPv4 address as appropriate
+                let text = await resp.text()
+                var lslTime = parseFloat(text)
+                var endPerf = performance.now()
+                var perfMid = (startPerf + endPerf) / 2
+                offsets.push(lslTime - perfMid / 1000)
+                await new Promise((r) => setTimeout(r, 100)) // Short delay between syncs
+            }
+            lslBaseTime = offsets.reduce((a, b) => a + b, 0) / offsets.length
+            console.log("LSL sync done (averaged):", lslBaseTime)
+            resolve(lslBaseTime)
+        } catch (e) {
+            console.error("LSL sync exception:", e)
+            reject(e)
+        }
+    })
+}
+
+function sendMarker(value = "1") {
+    // If not synced, still send marker (server will timestamp with local_clock())
+    if (lslBaseTime === null) {
+        console.warn("LSL not synced yet - sending without JS timestamp")
+        fetch("http://192.168.0.18:5000/marker?value=" + encodeURIComponent(value)) // change IPv4 address as appropriate
+            .then(function () {
+                console.log("sent marker (no-ts)", value)
+            })
+            .catch(function (err) {
+                console.error("Marker send error:", err)
+            })
+        return
+    }
+
+    var ts = lslBaseTime + performance.now() / 1000
+    var url = "http://192.168.0.18:5000/marker?value=" + encodeURIComponent(value) + "&ts=" + encodeURIComponent(ts) // change IPv4 address as appropriate
+    fetch(url)
+        .then(function () {
+            console.log("sent marker", value, "ts", ts)
+        })
+        .catch(function (err) {
+            console.error("Marker send error:", err)
+        })
+}
+
+// ---------------
+//  ILLUSION GAME
+// ---------------
+
 // Global variables ===============================================================================
 var block_number = 1 // block indexing variable
 var trial_number = 1 // trial indexing variable
@@ -172,7 +230,8 @@ function IG_create_trial(illusion_name = "Ponzo", type = "updown", marker = true
         },
         on_load: function () {
             if (marker) {
-                ig_create_marker(marker_position)
+                ig_create_marker(marker_position);
+                sendMarker("1");
             }
         }
     }
@@ -186,7 +245,8 @@ function IG_create_trial(illusion_name = "Ponzo", type = "updown", marker = true
     // Make scoring
     trial.on_finish = function (data) {
         if (marker) {
-            document.querySelector("#marker").remove()
+            document.querySelector("#marker").remove();
+            sendMarker("0");
         }
         // ISI: duration of the fixation cross
         data.isi = jsPsych.data.get().last(2).values()[0].time_elapsed
@@ -313,7 +373,7 @@ var ebbinghaus_practice = IG_make_trials(
     (instructions = ig_text_practice + ebbinghaus_instructions),
     (illusion_name = "Ebbinghaus"),
     (type = "leftright"),
-    (marker = false)
+    (marker = true)
 )
 
 var mullerlyer_practice = IG_make_trials(
@@ -321,7 +381,7 @@ var mullerlyer_practice = IG_make_trials(
     (instructions = ig_text_practice + mullerlyer_instructions),
     (illusion_name = "MullerLyer"),
     (type = "updown"),
-    (marker = false)
+    (marker = true)
 )
 
 var verticalhorizontal_practice = IG_make_trials(
@@ -329,7 +389,7 @@ var verticalhorizontal_practice = IG_make_trials(
     (instructions = ig_text_practice + verticalhorizontal_instructions),
     (illusion_name = "VerticalHorizontal"),
     (type = "leftright"),
-    (marker = false)
+    (marker = true)
 )
 
 var IG_practice_end = {
@@ -390,7 +450,7 @@ function create_debrief(illusion_name = "Ponzo") {
     return debrief
 }
 
-function IG_create_block(stimuli, show_blocknumber = true, show_marker = false) {
+function IG_create_block(stimuli, show_blocknumber = true, show_marker = true) {
     /* ---------------------- MULLERLYER ILLUSION --------------------- */
     var timeline_mullerlyer = IG_make_trials(
         stimuli,

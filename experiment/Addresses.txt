@@ -1,0 +1,7 @@
+python -m http.server 8002
+
+http://localhost:8002/experiment/RestingState.html
+http://localhost:8002/experiment/interoception.html
+http://localhost:8002/experiment/IllusionGame.html
+http://localhost:8002/experiment/CC.html
+http://localhost:8002/experiment/debrief.html

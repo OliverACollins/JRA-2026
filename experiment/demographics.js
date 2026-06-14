@@ -23,8 +23,8 @@ const demographics_consent = {
                     This study is being conducted by Oliver Collins and Dr. Dominique Makowski from the <b>University of Sussex</b>, who are happy to be contacted if you have any questions (see contact information below).</p>
 
                     <p><b>Why have I been invited and what will I do?</b><br>
-                    The goal is to investigate how our brains can unconsciously adapt and shape our perception to achieve desired goals. In this experiment, you will complete the <b>Illusion Game</b> - a task of speed and reflex in which you will need to make judgements whilst resisting different visual illusions. You will also be presented with other cognitive tasks and a couple of questionnaires, in which you will be asked questions about your personality, habits, and physical sensations that you typically experience in various settings, such as during stress, sexual activity, or at rest.
-                    The whole experiment will take <b style='color:#FF5722;'>~75 min</b> to complete, from setting up physiological sensors to the debriefing.</p>
+                    The goal is to investigate how our brains can unconsciously adapt and shape our perception to achieve desired goals. In this experiment, you will complete the <b>Illusion Game</b> - a task of speed and reflex in which you will need to make judgements whilst resisting different visual illusions. You will also be presented with other cognitive tasks and some questionnaires, in which you will be asked questions about your personality, habits, and physical sensations that you typically experience in various settings, such as during stress, sexual activity, or at rest.
+                    The whole experiment will take <b style='color:#FF5722;'>~90 min</b> to complete, from setting up physiological sensors to the debriefing.</p>
                         
                     <p><b>Do I have to take part?</b><br>
                     Your participation is entirely voluntary. You are free to choose not to take part, or to withdraw at any stage without having to give a reason and without being penalised in any way.
@@ -42,7 +42,7 @@ const demographics_consent = {
                     <b>Please read this information carefully</b> and then, if you wish to take part, please acknowledge that you have fully understood this sheet, and that you consent to take part in the study as it is described here.</p>
                     
                     <p><b>Who has approved this study?</b><br>
-                    This study has been approved by the Faculty Research Ethics Committee: Science, Engineering and Technology, and the project reference number is [TBC].
+                    This study has been approved by the Faculty Research Ethics Committee: Science, Engineering and Technology, and the project reference number is 2026-2040-2277.
                     
                     <p><b>Insurance</b><br>  
                     The University of Sussex has insurance in place to cover its legal liabilities in respect of this study.

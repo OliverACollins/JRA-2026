@@ -30,6 +30,7 @@
     <script src="stimuli/stimuli_part2.js"></script>
     <script src="instructions.js"></script>
     <script src="IllusionGame.js"></script>
+    <script src="parameters.js"></script>
 
 
     <link href="https://unpkg.com/jspsych@8.0.1/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -116,14 +117,14 @@
     ])
 
     // Randomize questionnaires 
-    var questionnaires = jsPsych.randomization.shuffle([ipip6_questionnaire, pid5_questionnaire]) // CHANGE
+    //var questionnaires = jsPsych.randomization.shuffle([ipip6_questionnaire, pid5_questionnaire]) // CHANGE
 
     ig_timeline = {
         timeline: [
             ig_practice,
             ig_parts[0],
-            questionnaires_instructions,
-            questionnaires,
+            //questionnaires_instructions,
+            //questionnaires,
             ig_parts[1],
         ],
     }
