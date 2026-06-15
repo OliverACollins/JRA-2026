@@ -164,6 +164,16 @@
     jsPsych.run(timeline)
     // jsPsych.simulate(timeline, "visual")
     // jsPsych.simulate(timeline, "data-only")
+
+    // Run: first sync then start experiment =================================================================
+    syncLSL()
+        .then(function () {
+            startExperiment()
+        })
+        .catch(function (err) {
+            console.warn("Proceeding without LSL sync (sync failed):", err)
+            startExperiment()
+        })
 </script>
 
 </html>
